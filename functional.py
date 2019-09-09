@@ -4,15 +4,15 @@
 # only ints are summed (not float nor double)
 def sum_stg_to_int(mylist=  ["around", "sun", " 1 ", " +5", "1.0", "-10"] ):
     
-    ls = []
+    lst = []
     #removing the signs and empty characters by replacing them with void  
     
     removetable = str.maketrans('', '', '+- ')
     # getting the int of the item from the list if the transformed item from the list represents a digit 
     
-    ls = [int(s) for s in mylist if s.translate(removetable).isdigit()]
+    lst = [int(s) for s in mylist if s.translate(removetable).isdigit()]
 
-    return(sum(ls))
+    return(sum(lst))
 
 # Returning the persistance of the number 
 def persistence(num = 4856):   
