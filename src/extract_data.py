@@ -7,11 +7,11 @@ import logging
 
 
 def extract_products():
-    
+
 #     script_dir = os.path.dirname(__file__)
-    file_path = ('/home/toufik/data.json')
-    with open(file_path) as datafile:
-        data = json.load(datafile)
+#     file_path = ('/home/toufik/data.json')
+#     with open(file_path) as datafile:
+#         data = json.load(datafile)
 
     def print_av(x, j):
 
@@ -26,8 +26,8 @@ def extract_products():
         logging.warning(f'product_id is {y}, product name is {z}')
 
 
-#     with open("data.json") as datafile:
-#         data = json.load(datafile)
+    with open("../data.json") as datafile:
+        data = json.load(datafile)
 
     ls = {}
     for i in range(len(data['Bundles'])):
@@ -73,4 +73,3 @@ def extract_products():
             f.write("%s,%s\n"%(key,ls[key]))
     return(ls)
 
-extract_products()
